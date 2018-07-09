@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>资源管理</title>
+    <link rel="stylesheet" href="stylesheets/manage.css" />
+    <link rel="shortcut icon" href="images/resouce.ico">
+    <link rel="stylesheet" href="stylesheets/styles.css" />
+    <link rel="stylesheet" href="stylesheets/buttons.css" />
+    <link rel="stylesheet" href="stylesheets/slides.css" />
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" href="stylesheets/index.css" />
+    <link rel="stylesheet" href="stylesheets/controlUi.css" />
+    <link rel="stylesheet" href="stylesheets/jquery-ui.min.css" />
+    <script src="javascripts/jquery-3.2.0.js"></script>
+    <script src="javascripts/jquery-ui.js"></script>
+    <script src="javascripts/manage.js"></script>
+    <script src="javascripts/gauge.js"></script>
+</head>
+
+<body>
+    <div id="tsingli">
+        <!-- 头部信息 -->
+        <div id="top">
+            <span class="top_title title1">资源管理</span>
+            <div class="top_container">
+                <span>
+                    <a href="/home" style="float: left;width: 100%;height: 100%;"></a>
+                </span>
+                <div class="cn_en">
+                    <div class="cn">CN</div>
+                    <div class="en">EN</div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- 左侧导航 -->
+        <div id="nav">
+            <ul>
+                <li class="checkLi">
+                    <span></span><i class="title2">一般图片资源</i>
+                </li>
+                <li>
+                    <span></span><i class="title3">贴图按钮模板</i>
+                </li>
+                <li>
+                    <span></span><i class="title4">特效按钮模板</i>
+                </li>
+                <li>
+                    <span></span><i class="title5">其他控件模板</i>
+                </li>
+                <li>
+                    <span></span><i class="title6">系统出厂模块</i>
+                </li>
+                <li>
+                    <span></span><i class="title7">用户自建模块</i>
+                </li>
+                <li>
+                    <span></span><i class="title8">标准红外模块</i>
+                </li>
+                <li>
+                    <span></span><i class="title9">组件组模板</i>
+                </li>
+                <li>
+                    <span></span><i class="title10">标准模组</i>
+                </li>
+                <li>
+                    <span></span><i class="title11">用户模组</i>
+                </li>
+            </ul>
+            <div id="space">
+                <p id="memory" class="title12">存储空间:</p>
+                <div id="warning" style="display: none;" class="title13">余量不足!</div>
+                <div class="showSpace">
+                    <div></div>
+                    <span id="used" style="position: absolute;z-index: 3;right: 35px;"></span>
+                    <span id="total" style="position: absolute;z-index: 3;right:0;"></span>
+                </div>
+            </div>
+        </div>
+        <!-- 内容区 -->
+        <div id="container">
+            <!-- 类别显示 -->
+            <div id="con_nav">
+                <div id="title">
+                    <span></span>
+                    <i class="title2">一般图片资源</i>
+                </div>
+                <div id="tool">
+                    <div class="delete">
+                        <span></span>
+                        <i class="title14">删除</i>
+                    </div>
+                </div>
+                <span class="inport title15">导入</span>
+                
+                <form enctype="multipart/form-data" name="form1" id="uploadForm">
+                    <input type="file" id="upload" name="upload" style="opacity: 0;display: none;" />
+                </form>
+            </div>
+            <!-- 内容显示 -->
+            <div id="content">
+                <div class="allCheck">
+                    <div class="allCheckBox">
+                        <div class="allChecked"></div>
+                        <span style="margin-top: 2px;" class="title16">全选</span>
+                    </div>
+                    <div class="classify" style="display: none;">
+                        <span class="title17">显示分类:</span>
+                        <div>
+                            <input type="radio" id="systemClassify" name="classify" />
+                        </div>
+                        <span class="title18">系统模板</span>
+                        <div>
+                            <input type="radio" id="userClassify" name="classify" />
+                        </div>
+                        <span class="title19">用户模板</span>
+                    </div>
+                </div>
+                <!-- <div class="infraredBox">
+                    <div class="tab" style="border-bottom: 0;background-color: #F7F7F7;" data-nav="true" data-port="InfraredA">A</div>
+                    <div class="tab" data-nav="false" data-port="InfraredB">B</div>
+                    <div class="tab" data-nav="false" data-port="InfraredC">C</div>
+                    <div class="tab" data-nav="false" data-port="InfraredD">D</div>
+                    <div class="tab" data-nav="false" data-port="InfraredE">E</div>
+                    <div class="tab" data-nav="false" data-port="InfraredF">F</div>
+                    <div class="tab" data-nav="false" data-port="InfraredG">G</div>
+                    <div class="tab" data-nav="false" data-port="InfraredH">H</div>
+                    <div class="tabControl ui-widget-header">
+
+                    </div>
+                </div> -->
+                <ul>
+
+                </ul>
+            </div>
+            <!-- 特效模板 -->
+            <div class="canvasBox" style="display: none;margin-top: 50px;">
+                <ul>
+                    <li>
+                        <div class="slideTemplate1" style="width: 125px;top: 50px;left: 0px;">
+                            <div class="slide_pathway" style="width: 105px;">
+                                <div class="slide_block" style="width: 20px;height: 20px;top: -5px;"></div>
+                            </div>
+                        </div>
+                        <p style="text-align:center;margin-top:114px;font-size:12px;">Slider_A_1</p>
+                    </li>
+                    <li>
+                        <div class="slideTemplate2" style="width: 125px;top: 53px;left: 0px;">
+                            <div class="slide_block2" style="transform: scale(0.5);">
+                                <span class="slide_block2_2"></span>
+                                <span class="slide_block2_2"></span>
+                                <span class="slide_block2_2"></span>
+                            </div>
+                        </div>
+                        <p style="text-align:center;margin-top:117px;font-size:12px;">Slider_A_2</p>
+                    </li>
+                    <li>
+                        <div class="slideTemplate3" style="transform: scaleX(0.3);top:44px;left:-147px;">
+                            <div class="slide_pathway3">
+                                <div class="slide_block3" style="top: -3px;"></div>
+                            </div>
+                            <span class="slide_scale"></span>
+                            <span class="slide_scale"></span>
+                            <span class="slide_scale"></span>
+                            <span class="slide_scale"></span>
+                            <span class="slide_scale"></span>
+                            <span class="slide_scale"></span>
+                            <span class="slide_scale"></span>
+                            <span class="slide_scale"></span>
+                            <span class="slide_scale"></span>
+                        </div>
+                        <p style="text-align:center;margin-top:99px;font-size:12px;">Slider_A_3</p>
+                    </li>  
+                    <li>
+                        <div class="progressModelBox">
+                            <div class="progress" style="width:200px;transform: scale(0.6);">
+                                <div class="progress-bar progress-bar-info progress-bar-striped" style="width: 100%;">
+                                    <div class="progress-value">
+                                        <span class="progressVal">100%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="text-align:center;margin-top:132px;font-size:12px;">Gauge_A_1</p>
+                    </li>
+                    <!-- <li>
+                        <div class="progressModelBox">
+                            <div class="progress" style="width:200px;transform: scale(0.6);">
+                                <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 75%;">
+                                    <div class="progress-value">
+                                        <span class="progressVal">75%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="progressModelBox">
+                            <div class="progress" style="width:200px;transform: scale(0.6)">
+                                <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 90%;">
+                                    <div class="progress-value">
+                                        <span class="progressVal">90%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="progressModelBox">
+                            <div class="progress" style="width:200px;transform: scale(0.6)">
+                                <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 60%;">
+                                    <div class="progress-value">
+                                        <span class="progressVal">80%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li> 
+                    <li>
+                        <div class="progressModelBox">
+                            <div class="loader-container" style="transform: scale(0.55);">
+                                <div class="meter">
+                                    <span class="progressVal">20%</span>
+                                </div>
+                                <span class="run runner"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="progressModelBox2" style="width: 40px; height: 50px;position: relative;">
+                            <div style="width: 40px; height: 50px;transform: scale(1,1);" class="battery blue">
+                                <div class="tube"></div>
+                                <div class="liquid">
+                                    <div class="head"></div>
+                                    <div class="body_bar moveBox">
+                                        <div class="drop large"></div>
+                                        <div class="drop medium"></div>
+                                        <div class="drop small"></div>
+                                    </div>
+                                    <div class="tail"></div>
+                                </div>
+                                <div class="glitter"></div>
+                                <div class="cap"></div>
+                            </div>
+                        </div>
+                    </li>-->
+                    <li>
+                        <div class="progressModelBox3" style="width: 75px; height: 100px;position: relative;">
+                            <div style="width: 75px; height: 100px;transform: scale(0.6);" class="battery red">
+                                <div class="tube"></div>
+                                <div class="liquid">
+                                    <div class="head"></div>
+                                    <div class="body_bar moveBox">
+                                        
+                                    </div>
+                                    <div class="tail"></div>
+                                </div>
+                                <div class="glitter"></div>
+                                <div class="cap"></div>
+                            </div>
+                        </div>
+                        <p style="text-align:center;margin-top:17px;font-size:12px;">Gauge_A_2</p>
+                    </li>
+                    <li>
+                        <div class="progressModelBox4" style="width: 140px; height: 173px;position: relative;">
+                            <div style="width: 140px; height: 225px;transform: scale(0.48);" class="battery">
+                                <div class="tube"></div>
+                                <div class="liquid">
+                                    <div class="head"></div>
+                                    <div class="body_bar moveBox">
+                                        
+                                    </div>
+                                    <div class="tail"></div>
+                                </div>
+                                <div class="glitter"></div>
+                                <div class="cap"></div>
+                            </div>
+                        </div>
+                        <p style="text-align:center;font-size:12px;margin-top:6px;">Gauge_A_3</p>
+                    </li>
+                    <li>
+                        <div class="progressModelBox5" style="width: 140px; height: 173px;position: relative;">
+                            <div style="width: 140px; height: 225px;transform: scale(0.48);" class="battery green">
+                                <div class="tube"></div>
+                                <div class="liquid">
+                                    <div class="head"></div>
+                                    <div class="body_bar moveBox">
+                                        
+                                    </div>
+                                    <div class="tail"></div>
+                                </div>
+                                <div class="glitter"></div>
+                                <div class="cap"></div>
+                            </div>
+                        </div>
+                        <p style="text-align:center;font-size:12px;margin-top:6px;">Gauge_A_4</p>
+                    </li>
+                    <!-- <li>
+                        <div class="progressModelBox5" style="width:128px;">
+                            <div class="container" style="transform: scale(0.3);">
+                                <input type="radio" class="radio" name="progress" value="five" id="five">
+                                <label for="five" class="label">5%</label>
+                                <input type="radio" class="radio" name="progress" value="twentyfive" id="twentyfive" checked="">
+                                <label for="twentyfive" class="label">25%</label>
+                                <input type="radio" class="radio" name="progress" value="fifty" id="fifty">
+                                <label for="fifty" class="label">50%</label>
+                                <input type="radio" class="radio" name="progress" value="seventyfive" id="seventyfive">
+                                <label for="seventyfive" class="label">75%</label>
+                                <input type="radio" class="radio" name="progress" value="onehundred" id="onehundred">
+                                <label for="onehundred" class="label">100%</label>
+                                <div class="system_progress2">
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li> -->
+                    <li>
+                        <div class="progressModelBox6">
+                            <div class="system_progress3" style="transform: scale(0.46);">
+                                <span class="progress-val progressVal">100%</span>
+                                <span class="progress-bar">
+                                    <span class="progress-in" style="width: 100%;"> </span>
+                                </span>
+                            </div>
+                        </div>
+                        <p style="text-align:center;margin-top:50px;font-size:12px;">Gauge_A_5</p>
+                    </li>
+                    <li>
+                        <div class="modelBox22">
+                            <canvas class="gaugeTemplate viewStyle" data-name="slider" data-scalex="1" data-scaley="1" data-rotatez="0" data-direction="round" style="width: 180px; transform: scale(0.6); height: 180px;" data-model="canvasModel" data-type="radial-gauge" data-width="180" data-height="180" data-units="°C" data-title="Temperature" data-min-value="-50" data-max-value="50" data-major-ticks="[-50,-40,-30,-20,-10,0,10,20,30,40,50]" data-minor-ticks="2" data-stroke-ticks="true" data-highlights="[
+                                    {&quot;from&quot;: -50, &quot;to&quot;: 0, &quot;color&quot;: &quot;rgba(0,0, 255, .3)&quot;},
+                                    {&quot;from&quot;: 0, &quot;to&quot;: 50, &quot;color&quot;: &quot;rgba(255, 0, 0, .3)&quot;}
+                                ]" data-ticks-angle="225" data-start-angle="67.5" data-color-major-ticks="#ddd" data-color-minor-ticks="#ddd" data-color-title="#eee" data-color-units="#ccc" data-color-numbers="#eee" data-color-plate="#222" data-border-shadow-width="0" data-borders="true" data-needle-type="arrow" data-needle-width="2" data-needle-circle-size="7" data-needle-circle-outer="true" data-needle-circle-inner="false" data-animation-duration="1500" data-animation-rule="linear" data-color-border-outer="#333" data-color-border-outer-end="#111" data-color-border-middle="#222" data-color-border-middle-end="#111" data-color-border-inner="#111" data-color-border-inner-end="#333" data-color-needle-shadow-down="#333" data-color-needle-circle-outer="#333" data-color-needle-circle-outer-end="#111" data-color-needle-circle-inner="#111" data-color-needle-circle-inner-end="#222" data-value-box-border-radius="0" data-color-value-box-rect="#222" data-color-value-box-rect-end="#333" data-font-value="Led" width="180" height="180"  data-value='-50'></canvas>
+                        </div>
+                        <p style="text-align:center;margin-top:-24px;font-size:12px;">Gauge_B_1</p>
+                    </li>
+                    <li>
+                        <div class="modelBox22">
+                            <canvas class="gaugeTemplate viewStyle" data-name="slider" data-direction="round" style="width:200px;transform: scale(0.6)"
+                                data-model="canvasModel" data-type="radial-gauge" data-width="180" data-height="180" data-units="Km/h"
+                                data-title="false" data-min-value="0" data-max-value="220" data-value="0" data-animate-on-init="true"
+                                data-major-ticks="0,20,40,60,80,100,120,140,160,180,200,220" data-minor-ticks="2" data-stroke-ticks="true"
+                                data-highlights='[{"from": 160, "to": 220, "color": "rgba(200, 50, 50, .75)"}]' data-color-plate="#222"
+                                data-color-major-ticks="#f5f5f5" data-color-minor-ticks="#ddd" data-color-title="#fff" data-color-units="#ccc"
+                                data-color-numbers="#eee" data-color-needle-start="rgba(240, 128, 128, 1)" data-color-needle-end="rgba(255, 160, 122, .9)"
+                                data-value-box="true" data-font-value="Led" data-font-numbers="Led" data-animated-value="true"
+                                data-borders="false" data-border-shadow-width="0" data-needle-type="arrow" data-needle-width="2"
+                                data-needle-circle-size="7" data-needle-circle-outer="true" data-needle-circle-inner="false"
+                                data-animation-duration="1500" data-animation-rule="linear" data-ticks-angle="250" data-start-angle="55"
+                                data-color-needle-shadow-down="#333" data-value-box-width="45"></canvas>
+                        </div>
+                        <p style="text-align:center;margin-top:-24px;font-size:12px;">Gauge_B_2</p>
+                    </li>
+                    <!-- <li>
+                        <div class="modelBox23">
+                            <canvas class="gaugeTemplate viewStyle" data-name="slider" data-direction="round" style="width:200px;transform: scale(0.2);transform-origin: left top;"
+                                data-model="canvasModel" data-type="linear-gauge" data-width="150" data-height="560" data-border-radius="20"
+                                data-borders="true" data-bar-stroke-width="20" data-minor-ticks="10" data-major-ticks="0,10,20,30,40,50,60,70,80,90,100"
+                                data-color-numbers="red,green,blue,transparent,#ccc,#ccc,#ccc,#ccc,#ccc,#ccc,#ccc" data-color-major-ticks="red,green,blue,transparent,#ccc,#ccc,#ccc,#ccc,#ccc,#ccc,#ccc"
+                                data-color-bar-stroke="#444" data-value="22.3" data-units="°C" data-color-value-box-shadow="false"
+                                data-tick-side="left" data-number-side="left" data-needle-side="left" data-animate-on-init="true"
+                                data-color-plate="transparent"></canvas>
+                        </div>
+                    </li> 
+                    <li>
+                        <div class="modelBox23">
+                            <canvas class="gaugeTemplate viewStyle" data-name="slider" data-direction="round" style="width:200px;transform: scale(0.2);transform-origin: left top;"
+                                data-model="canvasModel" data-type="linear-gauge" data-width="150" data-height="560" data-border-radius="20"
+                                data-borders="0" data-bar-stroke-width="0" data-minor-ticks="20" data-animation-rule="cycle"
+                                data-animation-duration="1000" data-title="Temperature" data-units="°C" data-color-value-box-shadow="false"
+                                data-animated-value="true"></canvas>
+                        </div>
+                    </li>-->
+                    <li>
+                        <div class="modelBox23">
+                            <canvas class="gaugeTemplate1 viewStyle" data-name="slider" data-direction="round" style="width:200px;transform: scale(0.2);transform-origin: left top;"
+                                data-model="canvasModel" data-type="linear-gauge" data-width="150" data-height="560" data-border-radius="0"
+                                data-borders="0" data-bar-begin-circle="25" data-minor-ticks="10" data-value="36.6" data-min-value="35"
+                                data-max-value="42" data-title="Temperature" data-units="°C" data-major-ticks="35,36,37,38,39,40,41,42"
+                                data-ticks-width="18" data-ticks-width-minor="7.5" data-bar-width="5" data-highlights="false"
+                                data-color-value-box-shadow="false" data-value-box-stroke="0" data-color-value-box-background="false"
+                                data-value-int="2" data-value-dec="1"></canvas>
+                        </div>
+                        <p style="text-align:center;font-size:12px;">Gauge_B_3</p>
+                    </li>
+                    <li>
+                        <div class="modelBox23">
+                            <canvas class="gaugeTemplate1 viewStyle" data-name="slider" data-direction="round" style="width:200px;transform: scale(0.2);transform-origin: left top;"
+                                data-model="canvasModel" data-type="linear-gauge" data-width="143" data-height="560" data-border-radius="20"
+                                data-borders="0" data-bar-begin-circle="false" data-title="Temperature" data-units="°C" data-minor-ticks="10"
+                                data-value="99" data-major-ticks="0,10,20,30,40,50,60,70,80,90,100" data-tick-side="right" data-number-side="right"
+                                data-needle-side="right" data-animation-rule="bounce" data-animation-duration="750" data-bar-stroke-width="5"
+                                data-value-box-border-radius="0" data-value-text-shadow="false"></canvas>
+                        </div>
+                        <p style="text-align:center;font-size:12px;">Gauge_B_4</p>
+                    </li>
+                    <li>
+                        <div class="modelBox25">
+                            <canvas class="gaugeTemplate2 viewStyle" data-name="slider" data-direction="round" style="width:200px;transform: scale(0.4);transform-origin: left top;"
+                                data-model="canvasModel" data-type="linear-gauge" data-width="120" data-height="314" data-border-radius="0"
+                                data-borders="0" data-bar-begin-circle="false" data-title="Temperature" data-units="°C" data-value="75.5"
+                                data-bar-stroke-width="5" data-highlights='[{"from":50, "to":75, "color": "red"}]'></canvas>
+                        </div>
+                        <p style="text-align:center;margin-top:0px;font-size:12px;">Gauge_B_5</p>
+                    </li>
+                    <!-- <li>
+                        <div class="modelBox25">
+                            <canvas class="gaugeTemplate viewStyle" data-name="slider" data-direction="round" style="width:200px;transform: scale(0.7);transform-origin: left top;"
+                                data-model="canvasModel" data-type="linear-gauge" data-width="180" data-height="58" data-border-radius="20"
+                                data-borders="0" data-bar-stroke-width="0" data-value="66.6" data-tick-side="left" data-number-side="left"
+                                data-needle-side="left" data-animation-rule="bounce" data-animation-duration="750" data-title="Temperature"
+                                data-units="°C"></canvas>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="modelBox25">
+                            <canvas class="gaugeTemplate viewStyle" data-name="slider" data-direction="round" style="width:200px;transform: scale(0.3);transform-origin: left top;"
+                                data-model="canvasModel" data-type="linear-gauge" data-width="400" data-height="150" data-min-value="0"
+                                data-max-value="220" data-major-ticks="0,20,40,60,80,100,120,140,160,180,200,220" data-minor-ticks="2"
+                                data-stroke-ticks="true" data-highlights="false" data-color-plate="#fff" data-value="10" data-border-shadow-width="0"
+                                data-borders="false" data-bar-begin-circle="false" data-bar-width="10" data-tick-side="left"
+                                data-number-side="left" data-needle-side="left" data-needle-type="line" data-needle-width="3"
+                                data-color-needle="#222" data-color-needle-end="#222" data-animation-duration="1500" data-animation-rule="linear"
+                                data-animation-target="plate"></canvas>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+        <!--导入贴图按钮模板-->
+        <div id="shade" style="display: none;"></div>
+        <!-- 预览遮罩层 -->
+        <div id="previewShade" style="display: none;"></div>
+        <!-- 创建贴图按钮模板弹窗 -->
+        <div id="inportPic" style="display: none;">
+            <div id="inportPic_top">
+                <span class="title20">导入贴图按钮模板</span>
+                <span class="closeInportPic"></span>
+            </div>
+            <div id="inportPic_bottom">
+                <div id="inportPic_content">
+                    <div class="picName">
+                        <span class="title21">模板名称
+                            <i></i>
+                        </span>
+                        <b>:</b>
+                        <input id="picBtnName" type="text" placeholder="只能输入数字、字母或下划线" value="" />
+                    </div>
+                    <div class="active">
+                        <span class="title22">激活
+                            <i></i>
+                        </span>
+                        <b>:</b>
+                        <input type="text" disabled="disabled" value="" />
+                        <div class="load title23">
+                            选择
+                        </div>
+                    </div>
+                    <div class="inactive">
+                        <span class="title24">非激活
+                            <i></i>
+                        </span>
+                        <b>:</b>
+                        <input type="text" disabled="disabled" value="" />
+                        <div class="load title23">
+                            选择
+                        </div>
+                    </div>
+                    <div class="cuttingLine">
+                        <span class="cutLine"></span>
+                        <span class="title25">模板样式预览</span>
+                        <span class="cutLine"></span>
+                    </div>
+                    <div class="showBox activeBox">
+                        <div class="activeBtn"></div>
+                        <p class="title26">按钮激活</p>
+                    </div>
+                    <div class="showBox inactiveBox">
+                        <div class="inactiveBtn"></div>
+                        <p class="title27">按钮非激活</p>
+                    </div>
+                </div>
+                <div id="inportPicBtn">
+                    <div class="ensureInport picButton title15">
+                        导入
+                    </div>
+                    <div class="reset picButton title28">
+                        重置
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 创建贴图按钮模板，图片选择窗口 -->
+        <div id="chooseBox" style="display: none;">
+            <div id="chooseBox_top">
+                <span class="title29">选择按钮样式图片</span>
+                <span id="closeLoad"></span>
+            </div>
+            <div id="chooseBox_center">
+                <ul>
+                </ul>
+            </div>
+            <div id="chooseBox_bottom">
+                <div id="chooseBtn" class="title30">确定</div>
+            </div>
+        </div>
+        <!-- 自建模块删除弹窗 -->
+        <div id="userModuleDelBox" style="display:none;">
+            <div class="delBox_title">
+                <span class="title31">模块删除</span>
+                <span class="closeDelBox"></span>
+            </div>
+            <p class="cueWords title32">删除以下自建模块与其关联的自建宏模块也将删除！</p>
+            <div id="accordionBox">
+                <div id="accordion">
+                    <!-- <h3>部分 1 <b>宏模块详情</b></h3>
+                    <div>
+                        <p>Mauris mauris</p>
+                        <p>Mauris mau</p>
+                        <p>Mauris mau</p>
+                        <p>Mauris mau</p>
+                    </div>-->
+                </div> 
+            </div>
+            <div id="delBox_btn">
+                <div class="delete_btn del_yes title30">确定</div>
+                <div class="delete_btn del_no title33">取消</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

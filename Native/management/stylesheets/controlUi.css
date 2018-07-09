@@ -1,0 +1,303 @@
+.controlBox{
+    position: absolute;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    left:0;
+    top:0;
+    z-index:6;
+}
+.leftModel .controlBox{
+    width:88px;
+    height: 58px;
+}
+.buttonParent .controlBox{
+    width:115px;
+    height:58px;
+    border-radius: 5px;
+}
+
+.sliderParent .controlBox{
+    width: 180px;
+    height: 20px;
+}
+.scaleplateParent .controlBox{
+    width:180px;
+    height: 20px;
+}
+.dynamicTextParent .controlBox,.drawAreaParent .controlBox{
+    height: 60px;
+    width: 90px;
+}
+.drawVideoParent .controlBox{
+    height: 240px;
+    width: 320px;
+}
+/*html{-webkit-text-size-adjust: none;}*/
+
+.viewButton {
+    width: 115px;
+    height: 58px;
+    display: inline-block;
+    outline: none;
+    padding: 0;
+    border:1px solid #000000;
+    /*position: relative;*/
+    /*border-style:solid;*/
+    text-decoration: none;
+    font-family:Arial;
+    text-align: center;
+    font-style:normal;
+    font-size:16px;
+    transform: rotateZ(0deg);
+    -webkit-border-radius: 5px;
+    background: #f0f0f0;
+    /*box-shadow:inset 4px 4px 4px rgba(0,0,0,.3);*/
+    box-shadow:inset -4px -4px 4px rgba(0,0,0,.3);
+    /*text-shadow: 0 1px 1px rgba(0, 0, 0, .3);*/
+
+}
+.textButton{
+    width: 115px;
+    height: 58px;
+    display: inline-block;
+    outline: none;
+    padding: 0;
+    border:1px solid #000000;
+    /*position: relative;*/
+    /*border-style:solid;*/
+    text-decoration: none;
+    font-family:Arial;
+    text-align: center;
+    font-style:normal;
+    font-size:24px;
+    transform: rotateZ(0deg);
+    /*-webkit-border-radius: 5px;*/
+    background: transparent;
+}
+.activeButton{
+    display: none;
+}
+.ui{
+    transform: rotateZ(0deg);
+}
+.drag{
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+.button_ui p{
+    /*border:1px solid #000000;*/
+    -webkit-border-radius: 5px;
+    width: 115px;
+    max-height: 99999px;
+    height: 56px;
+    display: table-cell;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    padding:5px;
+    margin: 0 auto;
+}
+.slider_ui{
+    width: 180px;
+    height: 20px;
+    border-radius: 5px;
+    background:#b3b3b3;
+    /*margin:5px auto;*/
+    /*position: absolute;*/
+    transform: rotateZ(0deg);
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.slider_ui .slider_box{
+    height: 150%;
+    width: 25px;
+    border-radius: 5px;
+    /*border:1px solid #606060;*/
+    background-color:#ffffff;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.slider_ui .sliderBackground{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    border-radius: 5px;
+    background: transparent;
+    display: block;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+.slh{
+    display: inline-block;
+    color: red;
+    min-width: 14px;
+    height: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    background: #FFFFFF;
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+}
+.scaleplate_ui{
+    width:180px;
+    height: 20px;
+    /*margin: 5px 0;*/
+    background: #b3b3b3;
+    border: 1px solid #909090;
+    /*position: absolute;*/
+    /*border-radius:5px ;*/
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    transform: rotateZ(0deg);
+}
+.scaleplate_ui .scaleplate_box{
+    position: absolute;
+    height: 100%;
+    width: 45%;
+    /*border-radius:5px;*/
+    background-color:#ffffff;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+.dynamicText_ui{
+    background: #ffffff;
+    font-family:Arial;
+    border:1px solid #000000;
+    height: 60px;
+    width: 90px;
+    cursor: default;
+    transform: rotateZ(0deg);
+}
+.dynamicText_ui p{
+    height: 58px;
+    width: 90px;
+    display: table-cell;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    padding: 5px;
+    -webkit-user-select: auto;
+}
+.drawArea_ui{
+    /*box-sizing: content-box;*/
+    width:90px;
+    height:60px;
+    border:1px solid #000000;
+    transform: rotateZ(0deg);
+    background: #ffffff;
+    /*display: table;*/
+}
+.drawArea_ui p{
+    box-sizing: border-box;
+    height: 58px;
+    width: 90px;
+    display: table-cell;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+    font-size: 16px;
+}
+.drawVideo_ui{
+    width: 320px;
+    height: 240px;
+    background: #cfd1cf;
+    border:1px solid #000000;
+    padding: 1px;
+    /*position: absolute;*/
+    transform: rotateZ(0deg);
+}
+.left_image{
+    width: 90px;
+    height: 60px;
+    border: 1px solid #000000;
+    transform: rotateZ(0deg);
+}
+.drawImage_ui{
+    width: 320px;
+    height: 240px;
+    border: 1px solid #000000;
+    transform: rotateZ(0deg);
+}
+.drawImage_ui p,.quote_ui p{
+    position: relative;
+    display: table-cell;
+    Word-break: break-all;
+    overflow:hidden;
+    text-align: center;
+    vertical-align: middle;
+    width: 320px;
+    height: 240px;
+}
+.left_image p,.externalReference p{
+    position: relative;
+    display: table-cell;
+    Word-break: break-all;
+    overflow:hidden;
+    text-align: center;
+    vertical-align: middle;
+    width: 90px;
+    height: 60px;
+}
+.left_image img,.drawImage_ui img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left:0;
+    top:0;
+}
+
+.drawImageParent .controlBox,.quoteParent .controlBox{
+    width: 320px;
+    height: 240px;
+}
+.quote_ui{
+    width: 320px;
+    height:240px;
+    border: 1px solid #000000;
+    transform: rotateZ(0deg);
+    background: #ffffff;
+}
+.externalReference{
+    width: 90px;
+    height: 60px;
+    border: 1px solid #000000;
+    transform: rotateZ(0deg);
+    background: #ffffff;
+}
+/*.externalReference object,.quote_ui object{*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+/*}*/
+.componentGroup{
+    margin: 3px;
+    height: 90px;
+    width: 90px;
+    box-sizing: content-box;
+    position: relative;
+    border:1px solid #000000;
+    padding: 5px;
+}
+.groupShadow{
+    width: 100%;
+    height: 100%;
+    background:transparent;
+    position: absolute;
+    left: 0;
+    top:0;
+}

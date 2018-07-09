@@ -1,0 +1,264 @@
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{font-size:12px; font-family:"微软雅黑";}
+input,a{outline:none;}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+#tsingli{
+    width:100%;
+    height:100%;
+    font-size: 14px;
+    overflow: hidden;
+}
+#title{
+    width:100%;
+    height: 60px;
+    overflow: hidden;
+}
+#title p{
+    line-height: 60px;
+    text-align: center;
+    font-size: 22px;
+}
+.go-home{
+    width: 23px;
+    height: 21px;
+    background-image: url(../images/BACK_HOBNE.png);
+    position: absolute;
+    top: 20px;
+    right: 340px;
+}
+#toolbar .toolbarBox{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+/* 屏幕尺寸小于1300px */
+@media screen and (max-width:1300px){
+    #toolbar .left{
+        width: 490px;
+        height: 40px;
+        float: left;
+        overflow: hidden;
+        margin-left: 5%;
+        margin-top: 32px;
+    }
+    #toolbar{
+        width:100%;
+        height: 160px;
+        background: #F4F4F4;
+        border-bottom: 1px solid #A0A0A0;
+        border-top: 1px solid #A0A0A0;
+        overflow: hidden;
+        position: relative;
+    }
+    #toolbar .right{
+        width: 260px;
+        height: 40px;
+        overflow: hidden;
+        float: left;
+        margin-top:32px;
+        margin-left: 36%;
+    }
+}
+/* 屏幕尺寸小于1500px */
+@media (min-width:1300px) and (max-width:1500px){
+    #toolbar .left{
+        width: 490px;
+        height: 40px;
+        float: left;
+        overflow: hidden;
+        margin-left: 4%;
+        margin-top: 32px;
+    }
+    #toolbar{
+        width:100%;
+        height: 100px;
+        background: #F4F4F4;
+        border-bottom: 1px solid #A0A0A0;
+        border-top: 1px solid #A0A0A0;
+        overflow: hidden;
+        position: relative;
+    }
+    #toolbar .right{
+        width: 260px;
+        height: 40px;
+        overflow: hidden;
+        float: left;
+        margin-top:32px;
+    }
+}
+/* 屏幕尺寸大于1500px */
+@media screen and (min-width:1500px){
+    #toolbar .left{
+        width: 490px;
+        height: 40px;
+        float: left;
+        overflow: hidden;
+        margin-left: 15%;
+        margin-top: 32px;
+    }
+    #toolbar{
+        width:100%;
+        height: 100px;
+        background: #F4F4F4;
+        border-bottom: 1px solid #A0A0A0;
+        border-top: 1px solid #A0A0A0;
+        overflow: hidden;
+        position: relative;
+    }
+    #toolbar .right{
+        width: 260px;
+        height: 40px;
+        overflow: hidden;
+        float: left;
+        margin-top:32px;
+    }
+}
+#toolbar .content{
+    width: 350px;
+    height: 40px;
+    float: left;
+    overflow: hidden;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 32px;
+}
+
+#toolbar .left input, #toolbar .content input{
+    height: 30px;
+    width: 140px;
+    padding: 0;
+    margin-left: 10px;
+}
+#toolbar .left .modelInput::-webkit-input-placeholder{
+    color: red;
+}
+.button{
+    height: 32px;
+    line-height: 32px;
+    background: #5B6B7B;
+    border-radius: 4px;
+    text-align: center;
+    color: #ffffff;
+    float: right;
+    margin-top: 1px;
+    cursor: pointer;
+}
+#toolbar .left .accredit{
+    width:81px;
+}
+#toolbar .content .lockingtime{
+    width: 102px;
+}
+#toolbar .right .start{
+    width:112px;
+    background: #559652;
+    margin-right: 20px;
+}
+#toolbar .right .download{
+    width:112px;
+}
+#container{
+    width:100%;
+    height: 84%;
+}
+#container .usb p{
+    width:112px;
+    height: 32px;
+    background: #AAAAAA;
+    color: #ffffff;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 4px;
+    margin-left: 23%;
+    margin-top: 25px;
+    cursor: pointer;
+}
+#container .versions{
+    font-size: 12px;
+    font-style: italic;
+    color: #5b6b7b;
+    text-align: center;
+    letter-spacing: 10px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.popout{
+    width: 560px;
+    height: 208px;
+    box-sizing: border-box;
+    border: 1px solid #B6B6B6;
+    border-radius: 4px;
+    background-color: #F4F4F4;
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url(../images/sc_icon.png);
+    background-repeat: no-repeat;
+    background-position: center 50px;  
+}
+.popout p{
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 16px;
+     color: #666666;
+    margin-top: 130px;
+}
+.versionBox {
+    width: 560px;
+    height: 310px;
+    box-sizing: border-box;
+    border: 1px solid #B6B6B6;
+    border-radius: 4px;
+    background-color: #F4F4F4;
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    margin: auto; 
+    color: #666666;
+    display: none;
+}
+.versionBox p{
+    height: 32px;
+    line-height: 32px;
+    padding-left: 6px;
+    border-bottom: 1px solid #c4c4c4;
+}
+.versionBox .closeVersion{
+    float: right;
+    width:12px;
+    height: 12px;
+    background: url(../images/btn_close.png) no-repeat;
+    margin-right: 10px;
+    margin: 10px;
+}
+.versionBox ul{
+    width:510px;
+    height:252px;
+    margin: 0px auto;
+    text-align: left;
+    overflow: auto;
+    padding: 10px;
+}
+.versionBox ul li{
+    height: 28px;
+    line-height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

@@ -1,0 +1,698 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    display: block;
+    border: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image:url("../images/bg_page.jpg");
+    background-size: cover;
+}
+.content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*background-color:rgb(13,63,93);*/
+    /*background-image:url("../images/bg_imgade.png");*/
+    /*background-position: center 0px;*/
+    /*background-size: 80%;*/
+    /*background-repeat: no-repeat;*/
+}
+.content .logo{
+    width: 114px;
+    height: 91px;
+    margin:22px 0 0 27px;
+    float: left;
+}
+.content .logo h1{
+    text-indent: -9999em;
+}
+/*主视觉*/
+.banner{
+	width: 72%;
+	height: 58%;
+	position: relative;
+    left: 50%;
+	margin-left: -36%;
+    background-image:url("../images/bg_imgade.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.banner .banner_img{
+	position: absolute;
+	animation:bannerUpdown 1.1s infinite alternate;
+	-webkit-animation:bannerUpdown 1.1s infinite alternate;
+    width:100%;
+    height:100%;
+}
+@keyframes bannerUpdown{
+	from{margin-top:1px;}
+	to{margin-top:4px;}
+	}
+@-webkit-keyframes bannerUpdown{
+	from{margin-top:1px;}
+	to{margin-top:4px;}
+	}
+/*主视觉-星星*/
+.banner .star,.star1,.star2,.star3,.star4,.star5,.star6,.star7,.star8,.star9,.star10,.star11,.star12,.star13,.star14,.star15{
+	width: 10px;
+	height: 10px;
+	background-color:rgba(177, 226, 255, 0.28);
+	position:absolute;
+	top:426px;
+	left: 677px;
+	border-radius: 50%;
+	box-shadow: 0 0 20px #fff;
+    -webkit-animation: twinkle_ 1s infinite linear;
+    animation: twinkle_ 1s infinite linear;
+}
+
+.banner .star1{
+	width: 7px;
+	height: 7px;
+	top: 28.2%;
+	left: 57%;
+	-webkit-animation: twinkle_ 1.7s infinite linear;
+    animation: twinkle_ 1.7s infinite linear;
+}
+.banner .star2{
+	width: 8px;
+	height: 8px;
+	top: 67%;
+	left: 12.8%;
+	-webkit-animation: twinkle_ 1s infinite linear;
+    animation: twinkle_ 1s infinite linear;
+	}
+.banner .star3{
+	width: 9px;
+	height: 9px;
+	top: 73%;
+	left: 25.6%;
+	-webkit-animation: twinkle_ 1.5s infinite linear;
+    animation: twinkle_ 1.5s infinite linear;
+	}
+.banner .star4{
+	width: 7px;
+	height: 7px;
+	top: 39.8%;
+	left: 28.6%;
+	-webkit-animation: twinkle_ 0.9s infinite linear;
+    animation: twinkle_ 0.9s infinite linear;
+	}
+.banner .star5{
+	top: 17%;
+	left: 69.2%;
+	-webkit-animation: twinkle_ 1.5s infinite linear;
+    animation: twinkle_ 1.5s infinite linear;
+	}
+.banner .star6{
+	top: 67%;
+	left: 46%;
+	-webkit-animation: twinkle_ 1.7s infinite linear;
+    animation: twinkle_ 1.7s infinite linear;
+	}
+.banner .star7{
+	width: 6px;
+	height: 6px;
+	top: 23%;
+	left: 48.4%;
+	-webkit-animation: twinkle_ 1.5s infinite linear;
+    animation: twinkle_ 1.5s infinite linear;
+	}
+.banner .star8{
+	width: 8px;
+	height: 8px;
+	top: 52%;
+	left: 58.6%;
+	-webkit-animation: twinkle_ 1.2s infinite linear;
+    animation: twinkle_ 1.2s infinite linear;
+	}
+.banner .star9{
+	width: 7px;
+	height: 7px;
+	top: 77%;
+	left: 61.6%;
+	-webkit-animation: twinkle_ 1.5s infinite linear;
+    animation: twinkle_ 1.5s infinite linear;
+	}
+.banner .star10{
+	top: 28%;
+	left: 23.8%;
+	-webkit-animation: twinkle_ 1.5s infinite linear;
+    animation: twinkle_ 1.5s infinite linear;
+	}
+.banner .star11{
+	top: 46.8%;
+	left: 79%;
+	-webkit-animation: twinkle_ 0.8s infinite linear;
+    animation: twinkle_ 0.8s infinite linear;
+	}
+.banner .star12{
+	width: 6px;
+	height: 6px;
+	top: 68.8%;
+	left: 71%;
+	-webkit-animation: twinkle_ 1.5s infinite linear;
+    animation: twinkle_ 1.5s infinite linear;
+	}
+.banner .star13{
+	top: 62.2%;
+	left: 90.2%;
+	-webkit-animation: twinkle_ 1s infinite linear;
+    animation: twinkle_ 1s infinite linear;
+	}
+.banner .star14{
+	top: 58.6%;
+	left: 94.6%;
+	-webkit-animation: twinkle_ 1.7s infinite linear;
+    animation: twinkle_ 1.7s infinite linear;
+	}
+.banner .star15{
+	width: 8px;
+	height: 8px;
+	top: 66%;
+	left: 94.6%;
+	-webkit-animation: twinkle_ 1.2s infinite linear;
+    animation: twinkle_ 1.2s infinite linear;
+	}
+
+@keyframes twinkle_ {
+    0% {
+        box-shadow: 0 0 0 transparent;
+    } 50% { 
+        box-shadow: 0 0 40px #fff;
+    } 100% { 
+        box-shadow: 0 0 0 transparent;
+    }
+}
+
+@-webkit-keyframes twinkle_ { 
+    0% {
+        box-shadow: 0 0 0 transparent;
+    } 50% { 
+        box-shadow: 0 0 20px #fff;
+    } 100% { 
+        box-shadow: 0 0 0 transparent;
+    }
+}
+/*导航区*/
+.content .nav{
+    position: absolute;
+    left: 50%;
+    bottom: 80px;
+    margin-left: -447px;
+    width:894px;
+    height: 294px;
+    z-index: 2;
+    background: url("../images/btn_bg.png") left top no-repeat;
+}
+.content .nav .nav-item{
+    position: absolute;
+    width: 136px;
+    height: 156px;
+    cursor: pointer;
+}
+.content .nav .two-nav{
+    position: absolute;
+    left: 136px;
+    top: -13px;
+    display: none;
+    width: 158px;
+    height: 181px;
+    background:url("../images/1.png") no-repeat;
+    background-size: contain;
+    /*padding:56px 0 0 0px;*/
+	text-align: center;
+}
+.content .nav .two-nav2{
+    position: absolute;
+    left: -160px;
+    top: -13px;
+    display: none;
+    width: 158px;
+    height: 181px;
+    background:url("../images/bg_tutorial.png") no-repeat;
+    background-size: contain;
+    text-align: center;
+    line-height: 28px;
+    color: #FFFFFF;
+    font-size:14px;
+}
+.content .nav .two-nav2 li:nth-child(1){
+    margin-top: 18px;
+}
+.content .nav .two-nav2 li:hover{
+    text-decoration: underline;
+}
+.content .nav .two-nav li{
+    font-size:14px;
+    line-height: 24px;
+    color:#fff;
+    cursor: pointer;
+    position: absolute;
+}
+.content .nav .two-nav li:nth-child(1){
+    top:35px;
+    left:52px;
+}
+.content .nav .two-nav li:nth-child(2){
+    top:102px;
+    left:13px;
+}
+.content .nav .two-nav li:nth-child(3){
+    top:102px;
+    left:91px;
+}
+.content .nav .two-nav li:hover{
+    text-decoration: underline;
+}
+.content .nav .nav-TLM3{
+    left: 150px;
+    top: 5px;
+}
+.content .nav .nav-vision{
+    left: 301px;
+    top: 5px;
+}
+.content .nav .nav-logic{
+    left: 453px;
+    top: 5px;
+}
+.content .nav .nav-help{
+    left: 605px;
+    top: 4px;
+}
+.content .nav .nav-board{
+    left: 377px;
+    top: 136px;
+}
+.content .nav .nav-course{
+    left: 225px;
+    top: 136px;
+}
+.content .nav .nav-upgrade{
+    left: 529px;
+    top: 135px;
+}
+.content .line{
+    position: absolute;
+    width: 1062px;
+    height: 80px;
+    left: 50%;
+    bottom:50px;
+    z-index: 1;
+    margin-left: -531px;
+}
+/*底部版权*/
+.content .footer{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 20px;
+    text-align: center;
+    font-size: 12px;
+    color:#fff;
+}
+/*自定义动画类名*/
+.animate {
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.language{
+    width:92px;
+    height: 40px;
+    color: #FFFFFF;
+    position: absolute;
+    right: 250px;
+    top:40px;
+    z-index: 5;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.language:hover{
+    opacity: 1;
+}
+.language .aboutUsIcon{
+    width: 18px;
+    height: 18px;
+    float: left;
+    background: url(../images/img_US.png) no-repeat;
+    background-position: center;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.forum{
+    width:92px;
+    height: 40px;
+    color: #FFFFFF;
+    position: absolute;
+    right: 170px;
+    top:40px;
+    z-index: 5;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.forum:hover{
+    opacity: 1;
+}
+.forum .forumIcon{
+    width: 18px;
+    height: 18px;
+    float: left;
+    background: url(../images/img_LT.png) no-repeat;
+    background-position: center;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.opinion{
+    width:92px;
+    height: 40px;
+    position: absolute;
+    right: 130px;
+    top:40px;
+    z-index: 5;
+    color: #FFFFFF;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    opacity: 0.8;
+}
+.opinion:hover{
+    opacity: 1;
+}
+.opinion .headImg{
+    width: 18px;
+    height: 18px;
+    float: left;
+    background-image:  url(../images/user_bg_mg.png);
+    background-repeat: no-repeat;
+    /* background: url(http://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83er0lLKdJT7FcIVS0V3QHVclUgCviaFOjlAqYqED7zcWQ8qz9QgEXsia4WBLBlO1KPQuFMntibcwMqNkA/132) no-repeat; */
+    background-size: 100% 100%;
+    background-position: center;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+}
+.opinion .login,.language .aboutUsText,.forum .forumText{
+    line-height: 40px;
+}
+#shade{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 10;
+    background: rgba(255,255,255,0.95);
+}
+#shade .prompt{
+    font-size: 16px;
+    width: 650px;
+    height: 360px;
+    position: absolute;
+    top:45%;
+    left:50%;
+    margin-top: -180px;
+    margin-left: -325px;
+    color: #606060;
+    background: url("../images/jy_img.png") no-repeat;
+}
+#shade .prompt p:nth-child(1){
+    font-size: 22px;
+    margin-top: 110px;
+    margin-bottom: 30px;
+}
+#shade .prompt p:nth-child(2){
+    margin-bottom: 70px;
+}
+#shade .prompt #downloadChrome{
+    margin-top: 6px;
+    margin-right: 10px;
+    float: left;
+}
+#shade .prompt .closePrompt{
+    width:144px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #606060;
+    text-align: center;
+    line-height: 40px;
+    float: right;
+    margin-top: 60px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+.aboutUs{
+    display: none;
+    width: 50%;
+    height: 54%;
+    background: url("../images/bg.png") no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20%;
+    margin-left: -25%;
+    z-index: 10;
+    color: #FFFFFF;
+    text-align: center;
+}
+.aboutUs p{
+    line-height: 34px;
+    font-size: 18px;
+}
+.aboutUs p:nth-child(1){
+    /*text-indent: 36px;*/
+    letter-spacing: 2px;
+    width: 80%;
+    text-align: justify;
+    margin:0px auto;
+    margin-top: 12%;
+    margin-bottom: 7%;
+    font-size: 16px;
+}
+.makeOpinion,.shade_logOff{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0, 0.8);
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 10;
+}
+.log_off{
+    width: 343px;
+    height: 194px;
+    background: url(../images/tc_bg.png) no-repeat;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    margin: auto;
+    color: #FFFFFF;
+}
+.log_off p{
+    text-align: center;
+    margin-top:50px;
+}
+.log_off .logOffBtn{
+    width:84px;
+    height:35px;
+    text-align: center;
+    line-height: 35px;
+    box-sizing: border-box;
+    float: left;
+    margin-top: 50px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.log_off .ensureLogOff{
+    background: rgba(114, 114, 114, 0.6);
+    margin-left: 80px;
+    margin-right: 20px;
+}
+.log_off .ensureLogOff:hover{
+    background: rgba(114, 114, 114, 1);
+}
+.log_off .cancelLogOff{
+    border: 1px solid #727272;
+}
+.loginBox {
+    width: 706px;
+    height: 558px;
+    background: url(../images/yj_bg.png) no-repeat;
+    margin: 150px auto;
+    position: relative;
+    overflow: hidden;
+}
+.loginBox p{
+    margin-top:108px;
+    margin-bottom: 72px;
+    font-size: 34px;
+    text-align: center;
+    color: #FFFFFF;
+    letter-spacing: 8px;
+}
+.loginBox .inputBox{
+    width: 240px;
+    height: 48px;
+    box-sizing: border-box;
+    border: 1px solid #606060;
+    margin: 0 auto;
+    background: #323232;
+}
+.loginBox .username{
+    background-image: url(../images/u_img.png);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    margin-bottom: 10px;
+}
+.loginBox .username_title{
+    float: left;
+    position: absolute;
+    top:238px;
+    left:485px;
+    color: red;
+}
+.loginBox .password_title{
+    float: left;
+    position: absolute;
+    top:296px;
+    left:485px;
+    color: red;
+}
+.loginBox .password,.changePwdBox .newPassword,.changePwdBox .newPassword2{
+    background-image: url(../images/m_img.png);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+}
+.loginBox .inputBox input{
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 180px;
+    height: 48px;
+    float: right;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+.loginBox .inputBox:hover{
+    border: 1px solid #FFFFFF;
+}
+.loginBox .loginBtn{
+    width: 240px;
+    height: 48px;
+    background: #323232;
+    opacity: 0.6;
+    text-align: center;
+    line-height: 48px;
+    color: #FFFFFF;
+    font: 16px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+.loginBox .loginBtn:hover{
+    opacity: 1;
+}
+.loginBox .toChangePwd{
+    width: 240px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 20px auto;
+    position: relative;
+}
+.loginBox .toChangePwd .toChangePwdBtn{
+    position: absolute;
+    top:2px;
+    left:88px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.loginBox .toChangePwd .toHome{
+    cursor: pointer;
+    position: absolute;
+    top:24px;
+    left:88px;
+    line-height: 20px;
+}
+.loginBox .toChangePwd .toChangePwdBtn:hover{
+    text-decoration: underline;
+}
+.loginBox .toChangePwd .toHome:hover{
+    text-decoration: underline;
+    
+}
+.changePwdBox p{
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.changePwdBox .inputBox{
+    margin-bottom: 10px;
+}
+.changePwdBox .username_title{
+    top: 150px;
+}
+.changePwdBox .password_title{
+    top:207px;
+}
+.changePwdBox .newpassword1_title{
+    float: left;
+    position: absolute;
+    top:265px;
+    left:485px;
+    color: red;
+}
+.changePwdBox .newpassword2_title{
+    float: left;
+    position: absolute;
+    top:322px;
+    left:485px;
+    color: red;
+}
+.cn-en{
+    width:48px;
+    height:16px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    position: absolute;
+    right: 80px;
+    top:52px;
+    z-index: 5;
+    cursor: pointer;
+    opacity: 0.8;
+    color: #fff;
+    font-size: 12px;
+}
+.cn-en div{
+    float: left;
+    width: 23px;
+    height: 14px;
+    line-height: 14px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.cn-en .cn{
+    background: #fff;
+    color: #000;
+    border-right: 1px solid #fff;
+}

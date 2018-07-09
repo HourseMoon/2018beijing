@@ -1,0 +1,654 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+b,em,i{
+    display:inline-block;
+    font-weight:normal;
+    font-style:normal;
+}
+img{
+    display: block;
+    border: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#tsingli{
+    width:100%;
+    height:100%;
+    position: relative;
+    overflow: hidden;
+}
+#top{
+    width:100%;
+    height: 6%;
+    background: #E0E0E0;
+    border-bottom: 1px solid #7D7D7D;
+}
+#top span{
+    font-size: 16px;
+    color: #6B6B6B;
+    margin-top: 1%;
+}
+#top span:nth-child(1){
+    float: left;
+    margin-left: 20%;
+}
+#top span:nth-child(2){
+    float: right;
+    margin-right: 20%;
+}
+#top span a{
+    float: left;
+    width:27px;
+    height:25px;
+    background: url("../images/index_btn.png") no-repeat;
+}
+
+#top .cn_en{
+    width:48px;
+    height:16px;
+    box-sizing: border-box;
+    border: 1px solid #7d7d7d;
+    position: absolute;
+    right: 300px;
+    top:22px;
+    z-index: 5;
+    cursor: pointer;
+    opacity: 0.8;
+    color: #fff;
+    font-size: 12px;
+    /* margin-top: 9%; */
+}
+#top .cn_en:hover{
+    opacity: 1;
+}
+#top .cn_en div{
+    float: left;
+    width: 23px;
+    height: 14px;
+    line-height: 14px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.cn_en .cn{
+    background: #fff;
+    color: #000;
+    border-right: 1px solid #7d7d7d;
+}
+
+#content{
+    width:100%;
+    height:94%;
+    background: url("../images/bg.jpg") repeat;
+}
+.setBox{
+    width:22%;
+    height:16%;
+    float: left;
+    background: #BEBEBE;
+    position: absolute;
+    /*top:50%;
+    left:50%;*/
+}
+
+.setBox span{
+    float: left;
+    margin-top: 2px;
+    margin-left: 1px;
+    margin-right: 18px;
+}
+#setIP{
+    /*margin-left: -23%;
+    margin-top: -13%;*/
+    left:27%;
+    top:20%;
+}
+#setIP span{
+    background: url("../images/IP.png") no-repeat;
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+#setDNS{
+    /*margin-left: 1%;
+    margin-top: -13%;*/
+    left: 51%;
+    top: 20%;
+}
+#setDNS span{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url("../images/DNS.png") no-repeat;
+}
+#setMAC{
+    /*margin-left: -23%;
+    margin-top: -2%;*/
+    left: 27%;
+    top:62%;
+}
+#setMAC span{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url("../images/mac.png") no-repeat;
+}
+#setCloud{
+    /*margin-left: 1%;
+    margin-top: -2%;*/
+    left: 27%;
+    top:41%;
+}
+#setCloud span{
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url("../images/yun.png") no-repeat;
+}
+.setShadow{
+    box-shadow: 4px 4px 6px #888888;
+}
+/* #title{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    margin-left: -220px;
+    color: #5F5F5F;
+}
+#title b{
+    font-weight:normal;
+    color: #6b6b6b;
+    padding-bottom: 2px;
+    cursor: pointer;
+}
+#title b:hover{
+    border-bottom: 1px solid #6b6b6b;
+} */
+.setIPBox,.setDNSBox,.setMACBox,.setCloudBox,.setTimeBox,.updateBox{
+    width:45%;
+    height:58%;
+    background: #F9F9F9;
+    position: absolute;
+    z-index: 10;
+    left:26%;
+    top:20%;
+    padding: 0 36px 0 36px;
+    overflow: hidden;
+}
+.IPTop,.DNSTop,.MACTop,.CloudTop,.TimeTop,.updateTop{
+    width:100%;
+    height: 15%;
+    border-bottom: 1px solid #D5D5D5;
+    overflow: hidden;
+}
+.setIPBox .IPContent{
+    overflow: hidden;
+}
+.IPTop span:nth-child(1),.DNSTop span:nth-child(1),.MACTop span:nth-child(1),.CloudTop span:nth-child(1),.TimeTop span:nth-child(1),.updateTop span:nth-child(1){
+    float: left;
+    font-size: 18px;
+    color: #616161;
+    /*line-height: 76px;*/
+    height: 100%;
+    margin-top: 3%;
+}
+.IPTop span:nth-child(2),.DNSTop span:nth-child(2),.MACTop span:nth-child(2),.CloudTop span:nth-child(2),.TimeTop span:nth-child(2),.updateTop span:nth-child(2){
+    float: right;
+    width: 27px;
+    height: 22px;
+    background: url("../images/fh_btn.png") no-repeat;
+    margin-top: 3%;
+}
+.cloudContent input{
+    width: 280px;
+    height:34px;
+    margin-bottom: 4%;
+    margin-left: 24px;
+    padding-left: 12px;
+    border: 1px solid #a9a9a9;
+}
+.MACContent input{
+    width: 280px;
+    height:34px;
+    margin-bottom: 4%;
+    margin-left: 24px;
+    padding-left: 12px;
+    border: 1px solid #a9a9a9;
+}
+.IPContent input{
+    width: 280px;
+    height:34px;
+    margin-bottom: 4%;
+    margin-left: 24px;
+    padding-left: 12px;
+    border: 1px solid #a9a9a9;
+}
+.DNSContent input{
+    width: 280px;
+    height:34px;
+    margin-bottom: 4%;
+    margin-left: 24px;
+    padding-left: 12px;
+    border: 1px solid #a9a9a9;
+}
+.userSet input{
+    color: #606060;
+}
+.IPContent span{
+    float: left;
+    width: 127px;
+    margin-top: 5px;
+    text-align: right;
+}
+.DNSContent span{
+    float: left;
+    margin-top: 6px;
+    text-align: right;
+    width: 180px;
+}
+.MACContent span{
+    float: left;
+    margin-top: 5px;
+    text-align: right;
+}
+.cloudContent span{
+    width: 64px;
+    float: left;
+    margin-top: 8px;
+    text-align: right;
+}
+.ipBox,.macBox,.cloudBox{
+    width: 470px;
+    margin: 0 auto;
+}
+.dnsBox{
+    width: 520px;
+    margin: 0 auto;
+}
+.ipAddress,.firstDNS,.linkCloudContainer{
+    margin-top: 4%;
+}
+.btnBox{
+    width: 16%;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    font-style: 18px;
+    float: left;
+    margin-top: 2%;
+    cursor: pointer;
+}
+.clearBtn{
+    border: 1px solid #606060;
+    background: #ffffff;
+    color: #606060;
+    box-sizing: border-box;
+    margin-right: 4%;
+    margin-left: 32%;
+}
+.setBtn{
+    background: #606060;
+    color: #ffffff;
+}
+#timeBtn{
+    left:51%;
+    top:41%;
+}
+#timeBtn span{
+    background: url("../images/time.png") no-repeat;
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+.timeContent{
+    font-size: 16px;
+    color: #6b6b6b;
+    width: 390px;
+    height: 85%;
+    margin: 0 auto;
+}
+.showTime span:nth-child(1){
+    /*text-align:justify;*/
+    float: left;
+    /*width: 68px;
+    letter-spacing: 1px;*/
+}
+/*.showTime span:nth-child(1) > b{
+    display: inline-block;
+    padding-left: 100%;
+}*/
+.showTime span:nth-child(2){
+    margin-left: 55px;
+}
+.timeContent .time{
+    height: 14%;
+    position: relative;
+}
+.timeContent .years {
+    margin-top: 12%;
+}
+.time span{
+    float: left;
+}
+.time input{
+    padding: 0;
+    border: none;
+    width:40px;
+    height: 22px;
+    float: left;
+    text-align: center;
+}
+.time .checkBox{
+    float: left;
+    width: 66px;
+    height: 24px;
+    box-sizing: border-box;
+    border: 1px solid #606060;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.time .checkYears,.time .checkHours{
+    margin-left: 20px;
+}
+.time .checkBox .checkBtn{
+    width: 23px;
+    height: 23px;
+    border-left: 1px solid #606060;
+    float: right;
+    background: url("../images/lower_img.png") no-repeat;
+    background-position: center;
+}
+.timeContent .setTimeBtn{
+    width: 30%;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    font-style: 18px;
+    float: left;
+    margin-top: 3%;
+    cursor: pointer;
+    background: #606060;
+    color: #ffffff;
+    margin-left: 10%;
+}
+.timeContent .getTimeBtn{
+    width: 30%;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    font-style: 18px;
+    float: left;
+    margin-top: 3%;
+    cursor: pointer;
+    background: #606060;
+    color: #ffffff;
+    margin-left: 15%;
+}
+.time .checkLi{
+    width: 66px;
+    height: 92px;
+    box-sizing: border-box;
+    border: 1px solid #606060;
+    background: #FFFFFF;
+    position: absolute;
+    z-index: 3;
+    overflow: hidden;
+}
+.time .checkYearsLi,.time .checkHoursLi{
+    top: 23px;
+    left: 88px;
+}
+.time .checkMonthsLi,.time .checkMinsLi{
+    top: 23px;
+    left: 186px;
+}
+.time .checkDaysLi,.time .checkSecsLi{
+    top: 23px;
+    left: 284px;
+}
+.time .checkLi ul{
+    overflow-y: scroll;
+    height: 90px;
+}
+/*�����������߼���������߷ֱ��Ӧ�����������ĳߴ�*/
+.time .checkLi ul::-webkit-scrollbar{
+    width: 4px;
+    height: 4px;
+}
+/*����������Ĺ��������Ӱ��Բ��*/
+.time .checkLi ul::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #f5f5f5;
+}
+/*���廬�飬����Ӱ��Բ��*/
+.time .checkLi ul::-webkit-scrollbar-thumb{
+    width: 4px;
+    height: 4px;
+    background-color: #6b6b6b;
+}
+.time .checkLi ul li{
+    height: 22px;
+    text-align: center;
+    cursor: pointer;
+}
+.time .checkLi ul li:hover{
+    background: #AAAAAA;
+}
+.userSet i{
+    float: right;
+    width: 14px;
+    height: 14px;
+    margin-top: 11px;
+    /*background: url("../images/false_img.png") no-repeat;*/
+}
+.showData{
+    width: 230px;
+    height: 65px;
+    font-size: 18px;
+    color: #606060;
+    background-image: url("../images/sc_icon.png");
+    background-repeat: no-repeat;
+    box-shadow: #666 0px 0px 10px;
+    background-position: 22px 12px;
+    position: absolute;
+    /*z-index: 5;*/
+    top:50%;
+    left:50%;
+    margin-top: -33px;
+    margin-left: -115px;
+    background-color: #FFFFFF;
+}
+.showData p{
+    line-height: 65px;
+    padding-left: 70px;
+}
+.shade{
+    width:100%;
+    height:100%;
+    position: absolute;
+    z-index: 20;
+    top:0;
+    left:0;
+    background: rgba(0, 0, 0, 0.4);
+}
+.shade .rotate_prompt{
+    width: 41px;
+    height:41px;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: url('../images/loading.png') no-repeat;
+    animation: spin 1s infinite linear;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+#updateBtn{
+    left:51%;
+    top:62%;
+}
+#updateBtn span{
+    background: url("../images/update.png") no-repeat;
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+.updateContent{
+    margin-top: 30px;
+    color: #606060;
+}
+.updateContent p i{
+    float: left;
+    width:120px;
+    text-align: right;
+}
+.updateContent p span{
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.updateContent ul li {
+    height: 14px;
+    margin: 6px 0;
+}
+#ensureUpdate{
+    width:138px;
+    height: 42px;
+    background: #606060;
+    color: #ffffff;
+    text-align: center;
+    line-height: 42px;
+    margin: 10% 44%;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+/* 屏幕尺寸小于1500px */
+@media screen and (max-width:1500px){
+    .setBox p{
+        margin-left: 18%;
+        margin-top: 16%;
+        color: #5F5F5F;
+    }
+    .updateContent p{
+        margin-left:26%;
+        margin-bottom: 20px;
+    }
+
+    .updateContent ul{
+        margin-left: 45%;
+        font-size: 13px;
+        margin-top: -10px;
+    }
+}
+/* 屏幕尺寸大于1500px */
+@media screen and (min-width:1500px){
+    .setBox p{
+        margin-left: 30%;
+        margin-top: 16%;
+        color: #5F5F5F;
+    }
+    .updateContent p{
+        margin-left:26%;
+        margin-bottom: 20px;
+    }
+
+    .updateContent ul{
+        margin-left: 42.3%;
+        font-size: 13px;
+        margin-top: -10px;
+    }
+}
+.setMACBox .MACContent div{
+    overflow: hidden;
+    text-align: center;
+    color: #616161;
+    padding-left: 30%;
+    margin-bottom: 30px;
+}
+.setMACBox .MACContent div .appSpan{
+    margin-left: 20px;
+    
+}
+.setMACBox .MACContent div:nth-child(1){
+    margin-top: 80px;
+}
+.setMACBox .MACContent div:nth-child(4) .appDownload{
+    width: 90px;
+    height:24px;
+    font-size: 15px;
+    border: 1px solid #D5D5D5;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: #FFFFFF;
+    background:rgba(96,96,96,0.6);
+}
+/* app在线状态显示 */
+.setMACBox .MACContent .onOffLineStatus{
+    width:10px;
+    height:10px;
+    background: #D12D2C;
+    border: 1px solid #9D9D9D;
+    border-radius: 6px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+/* 云平台补充 */
+/* .setCloudBox .cloudContent .linkCloudContainer{
+    margin-top: 40px;
+} */
+.setCloudBox .cloudContent #linkCloud{
+    overflow: hidden;
+    margin-bottom: 4%;
+    font-size: 14px;
+    margin-left: 88px;
+    width: 294px;
+}
+.setCloudBox .cloudContent #linkCloud .onOffLineBox{
+    width:14px;
+    height:14px;
+    border:1px solid #606060;
+    border-radius: 14px;
+    background-image: url('../images/right.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.setCloudBox .cloudContent #linkCloud .on_off_line{
+    text-align: center;
+    width: 50px;
+}
+.setCloudBox .cloudContent #linkCloud .bind_unbind_img{
+    width: 16px;
+    height: 16px;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    /* margin-right: 5px; */
+}
+.setCloudBox .cloudContent #linkCloud .on_line_img{
+    background-image: url('../images/bind.png');
+}
+.setCloudBox .cloudContent #linkCloud .link_img{
+    margin-top: 10px;
+}

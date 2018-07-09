@@ -1,0 +1,41 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title 产品出厂授权记录
+    link(rel='stylesheet', href='stylesheets/accredit_content.css')
+    link(rel='shortcut icon', href='images/favicon.ico')
+    script(src='javascripts/jquery-3.2.0.js')
+    script(src='javascripts/accredit_content.js')
+  body
+    #tsingli
+      ._contentTop
+        #title
+          p 授权设备记录
+          #exportBtn 导出Excel
+      #content
+        #title_list
+          .contentTop
+            p 序列号
+            p TYPE
+            p CPU ID
+            p SN
+            p 日期
+        ul
+          //
+            <li>
+            <div class="contentTop">
+            <p>1</p>
+            <p>dfdf5</p>
+            <p>869595868</p>
+            <p>2017-12-12 15:00</p>
+            </div>
+            </li>
+      #exportBox
+        p._p 导出Excel
+        div
+          p 是否导出Excel
+          #no.yesORno 否
+          #yes.yesORno 是

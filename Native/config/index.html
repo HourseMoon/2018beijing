@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>系统配置</title>
+    <link rel="stylesheet" href="stylesheets/package.css"/>
+    <link rel="shortcut icon" href="images/set.ico">
+    <script src="javascripts/jquery-3.2.0.js"></script>
+    <script src="javascripts/package.js"></script>
+</head>
+<body>
+    <div id="tsingli">
+        <div id="top">
+            <span class="title1" style="font-size: 18px;font-weight: bold;">系统设置</span>
+            <span><a href="/home"></a></span>
+            <div class="cn_en">
+                <div class="cn">CN</div>
+                <div class="en">EN</div>
+            </div>
+        </div>
+        <div id="content">
+            <div id = "setIP" class="setBox">
+                <p><span></span><i class="title2">网络地址设置</i></p>
+            </div>
+            <div id = "setDNS" class="setBox">
+                <p><span></span><i class="title3">DNS服务器设置</i></p>
+            </div>
+            
+            <div id = "setCloud" class="setBox">
+                <p><span></span><i class="title4">云服务器设置</i></p>
+            </div>
+            <div id="timeBtn" class="setBox ">
+                <p><span></span><i class="title5">系统时间设置</i></p>
+            </div>
+            <div id = "setMAC" class="setBox">
+                <p><span></span><i class="title6">APP应用管理</i></p>
+            </div>
+            <div id="updateBtn" class="setBox ">
+                <p><span></span><i class="title7">系统版本升级</i></p>
+            </div>
+            <!-- <p id = "title">
+                <span>——————&nbsp;&nbsp;</span>
+                <b class="timeBtn">系统时间设置</b>
+                <b> · </b>
+                <b class="updateBtn">系统版本升级</b>
+                <span>&nbsp;&nbsp;——————</span>
+            </p> -->
+            <div class="setIPBox userSet checkIp" style="display:none;">
+                <div class="IPTop">
+                    <span class="title2">网络地址设置</span>
+                    <span class="back"></span>
+                </div>
+                <div class="IPContent">
+                    <div class="ipAddress ipBox">
+                        <span class="ip_title2">&nbsp;&nbsp;&nbsp;IP地址</span>
+                        <input type="text" class="ipInput"/>
+                        <i></i>
+                    </div>
+                    <div class="protNum ipBox">
+                        <span class="ip_title3">&nbsp;&nbsp;&nbsp;端口号</span>
+                        <input type="text" class="protInput" value="80" disabled="disabled"/>
+                    </div>
+                    <div class="subnetMask ipBox">
+                        <span class="ip_title4">子网掩码</span>
+                        <input type="text" class="maskInput"/>
+                        <i></i>
+                    </div>
+                    <div class="gateway ipBox">
+                        <span class="ip_title5">默认网关</span>
+                        <input type="text" class="gatewayInput"/>
+                        <i></i>
+                    </div>
+                    <div class="MACAddress macBox">
+                        <span class="ip_title6">MAC地址</span>
+                        <input type="text" class="macInput"/><i></i>
+                    </div>
+                    <div class="clearBtn btnBox">清除</div>
+                    <div class="setBtn btnBox ipSetBtn">设置</div>
+                </div>
+            </div>
+            <div class="setDNSBox userSet checkIp" style="display:none;">
+                <div class="DNSTop">
+                    <span class="title3">DNS服务器设置</span>
+                    <span class="back"></span>
+                </div>
+                <div class="DNSContent" style="overflow: hidden;margin-top: 10%;">
+                    <div class="firstDNS dnsBox">
+                        <span class="dns_title1">首选DNS服务器</span>
+                        <input type="text" class="dns1Input"/>
+                        <i></i>
+                    </div>
+                    <div class="secondDNS dnsBox">
+                        <span class="dns_title2">备选DNS服务器</span>
+                        <input type="text" class="dns2Input"/>
+                        <i></i>
+                    </div>
+                    <div class="clearBtn btnBox">清除</div>
+                    <div class="setBtn btnBox dnsSetBtn">设置</div>
+                </div>
+            </div>
+            
+            <div class="setCloudBox userSet" style="display:none;">
+                <div class="CloudTop">
+                    <span class="title4">云服务器设置</span>
+                    <span class="back"></span>
+                </div>
+                <div class="cloudContent checkIp" style="overflow: hidden;margin-top: 4%;">
+                    <div class="linkCloudContainer cloudBox">
+                        <span class="cloud_title1" style="margin-right:20px;">连云平台</span>
+                        <div id="linkCloud">
+                            <span class="onOffLineBox link_img on_line" ></span>
+                            <span class="on_off_line cloud_title2">连接</span>
+                            <span class="onOffLineBox link_img off_line" ></span>
+                            <span class="on_off_line cloud_title3">离线</span>
+                            <span class="bind_unbind_img link_img on_line_img" style="margin-left:20px;"></span>
+                            <span class="on_off on_off_line cloud_title4"></span>
+                            <span class="bind_unbind_img link_img bind_img"></span>
+                            <span class="bind_unbind on_off_line cloud_title5"></span>
+                        </div>
+                    </div>
+                    <div class="domainAddress cloudBox">
+                        <span class="cloud_title8">域名地址</span>
+                        <input type="text" class="domainInput"/>
+                        <i></i>
+                    </div>
+                    <div class="protNum cloudBox">
+                        <span class="ip_title3">&nbsp;&nbsp;&nbsp;端口号</span>
+                        <input type="text" class="cloud_port"/>
+                        <i></i>
+                    </div>
+                    <div class="sn cloudBox">
+                        <span class="cloud_title9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S/N</span>
+                        <input type="text" disabled="disabled"/>
+                        <i></i>
+                    </div>
+                    <div class="clearBtn btnBox">清除</div>
+                    <div class="setBtn btnBox cloudSetBtn">设置</div>
+                </div>
+            </div>
+            <div class="setTimeBox" style="display:none;">
+                <div class="TimeTop">
+                    <span class="title5">系统时间设置</span>
+                    <span class="back"></span>
+                </div>
+                <div class="timeContent">
+                    <div class="showTime years time">
+                        <span class="time_title1">设备日期:</span>
+                        <span></span>
+                    </div>
+                    <div class="showTime hours time">
+                        <span class="time_title2">设备时间:</span>
+                        <span></span>
+                    </div>
+                    <div class="setYears time">
+                        <span class="time_title3">设置日期:</span>
+                        <div class="checkBox checkYears">
+                            <input type="text">
+                            <div class="checkBtn"></div>
+                            <div class="checkYearsLi checkLi" style="display: none;">
+                                <ul>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <span class="time_title4">年</span>
+                        <div class="checkBox checkMonths">
+                            <input type="text">
+                            <div class="checkBtn"></div>
+                            <div class="checkMonthsLi checkLi" style="display: none;">
+                                <ul>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>5</li>
+                                    <li>6</li>
+                                    <li>7</li>
+                                    <li>8</li>
+                                    <li>9</li>
+                                    <li>10</li>
+                                    <li>11</li>
+                                    <li>12</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <span class="time_title5">月</span>
+                        <div class="checkBox checkDays">
+                            <input type="text">
+                            <div class="checkBtn"></div>
+                            <div class="checkDaysLi checkLi" style="display: none;">
+                                <ul></ul>
+                            </div>
+                        </div>
+                        <span class="time_title6">日</span>
+                    </div>
+                    <div class="setHors time">
+                        <span class="time_title7">设置时间:</span>
+                        <div class="checkBox checkHours">
+                            <input type="text">
+                            <div class="checkBtn"></div>
+                            <div class="checkHoursLi checkLi" style="display: none;">
+                                <ul>
+                                    <li>00</li>
+                                    <li>01</li>
+                                    <li>02</li>
+                                    <li>03</li>
+                                    <li>04</li>
+                                    <li>05</li>
+                                    <li>06</li>
+                                    <li>07</li>
+                                    <li>08</li>
+                                    <li>09</li>
+                                    <li>10</li>
+                                    <li>11</li>
+                                    <li>12</li>
+                                    <li>13</li>
+                                    <li>14</li>
+                                    <li>15</li>
+                                    <li>16</li>
+                                    <li>17</li>
+                                    <li>18</li>
+                                    <li>19</li>
+                                    <li>20</li>
+                                    <li>21</li>
+                                    <li>22</li>
+                                    <li>23</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <span class="time_title8">时</span>
+                        <div class="checkBox checkMins">
+                            <input type="text">
+                            <div class="checkBtn"></div>
+                            <div class="checkMinsLi checkLi" style="display: none;">
+                                <ul>
+                                    <li>00</li>
+                                    <li>01</li>
+                                    <li>02</li>
+                                    <li>03</li>
+                                    <li>04</li>
+                                    <li>05</li>
+                                    <li>06</li>
+                                    <li>07</li>
+                                    <li>08</li>
+                                    <li>09</li>
+                                    <li>10</li>
+                                    <li>11</li>
+                                    <li>12</li>
+                                    <li>13</li>
+                                    <li>14</li>
+                                    <li>15</li>
+                                    <li>16</li>
+                                    <li>17</li>
+                                    <li>18</li>
+                                    <li>19</li>
+                                    <li>20</li>
+                                    <li>21</li>
+                                    <li>22</li>
+                                    <li>23</li>
+                                    <li>24</li>
+                                    <li>25</li>
+                                    <li>26</li>
+                                    <li>27</li>
+                                    <li>28</li>
+                                    <li>29</li>
+                                    <li>30</li>
+                                    <li>31</li>
+                                    <li>32</li>
+                                    <li>33</li>
+                                    <li>34</li>
+                                    <li>35</li>
+                                    <li>36</li>
+                                    <li>37</li>
+                                    <li>38</li>
+                                    <li>39</li>
+                                    <li>40</li>
+                                    <li>41</li>
+                                    <li>42</li>
+                                    <li>43</li>
+                                    <li>44</li>
+                                    <li>45</li>
+                                    <li>46</li>
+                                    <li>47</li>
+                                    <li>48</li>
+                                    <li>49</li>
+                                    <li>50</li>
+                                    <li>51</li>
+                                    <li>52</li>
+                                    <li>53</li>
+                                    <li>54</li>
+                                    <li>55</li>
+                                    <li>56</li>
+                                    <li>57</li>
+                                    <li>58</li>
+                                    <li>59</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <span class="time_title9">分</span>
+                        <div class="checkBox checkSecs">
+                            <input type="text">
+                            <div class="checkBtn"></div>
+                            <div class="checkSecsLi checkLi" style="display: none;">
+                                <ul>
+                                    <li>00</li>
+                                    <li>01</li>
+                                    <li>02</li>
+                                    <li>03</li>
+                                    <li>04</li>
+                                    <li>05</li>
+                                    <li>06</li>
+                                    <li>07</li>
+                                    <li>08</li>
+                                    <li>09</li>
+                                    <li>10</li>
+                                    <li>11</li>
+                                    <li>12</li>
+                                    <li>13</li>
+                                    <li>14</li>
+                                    <li>15</li>
+                                    <li>16</li>
+                                    <li>17</li>
+                                    <li>18</li>
+                                    <li>19</li>
+                                    <li>20</li>
+                                    <li>21</li>
+                                    <li>22</li>
+                                    <li>23</li>
+                                    <li>24</li>
+                                    <li>25</li>
+                                    <li>26</li>
+                                    <li>27</li>
+                                    <li>28</li>
+                                    <li>29</li>
+                                    <li>30</li>
+                                    <li>31</li>
+                                    <li>32</li>
+                                    <li>33</li>
+                                    <li>34</li>
+                                    <li>35</li>
+                                    <li>36</li>
+                                    <li>37</li>
+                                    <li>38</li>
+                                    <li>39</li>
+                                    <li>40</li>
+                                    <li>41</li>
+                                    <li>42</li>
+                                    <li>43</li>
+                                    <li>44</li>
+                                    <li>45</li>
+                                    <li>46</li>
+                                    <li>47</li>
+                                    <li>48</li>
+                                    <li>49</li>
+                                    <li>50</li>
+                                    <li>51</li>
+                                    <li>52</li>
+                                    <li>53</li>
+                                    <li>54</li>
+                                    <li>55</li>
+                                    <li>56</li>
+                                    <li>57</li>
+                                    <li>58</li>
+                                    <li>59</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <span class="time_title10">秒</span>
+                    </div>
+                    <div class="getTimeBtn time_title11">获取电脑时间</div>
+                    <div class="setTimeBtn time_title12">设置</div>
+                </div>
+            </div>
+            <div class="setMACBox userSet" style="display: none;">
+                <div class="MACTop">
+                    <span class="title6">APP应用管理</span>
+                    <span class="back"></span>
+                </div>
+                <div class="MACContent" >
+                    <div>
+                        <span class="app_title1">VN工程创建时间:</span>
+                        <span class="appSpan VN_time"></span>
+                    </div>
+                    <div>
+                        <span class="app_title2">VN软件版本信息:</span>
+                        <span class="appSpan VN_vision"></span>
+                    </div>
+                    <div>
+                        <span class="app_title3">&nbsp;&nbsp;AI智控应用状态:</span>
+                        <span class="onOffLineStatus"></span>
+                        <span class="appSpan APPStatus" style="width: 96px;"></span>
+                    </div>
+                    <div>
+                        <span class="app_title4">&nbsp;&nbsp;AI智控应用推送:</span>
+                        <span class="appDownload app_title5">推送</span>
+                    </div>
+                </div>
+            </div>
+            <div class="updateBox" style="display:none;">
+                <div class="updateTop">
+                    <span class="title7">系统版本升级</span>
+                    <span class="back"></span>
+                </div>
+                <div class="updateContent" >
+                    <!-- <p>系统版本 <span class="versions">V1.0</span></p>
+                    <p>版本说明 <span>本次系统升级主要内容</span></p>
+                    <ul>
+                        <li>1.人工智能前导算法；</li>
+                        <li>1.人工智能前导算法；</li>
+                        <li>1.人工智能前导算法；</li>
+                    </ul> -->
+                    <div id="ensureUpdate" class="update_title1">
+                        更新升级
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shade" style="display:none;"></div>
+</body>
+</html>

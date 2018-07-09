@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自建模块</title>
+    <script src="javascripts/jquery-3.2.0.js"></script>
+    <script src="javascripts/md5.js"></script>
+    <script src="javascripts/module.js"></script>
+    <link rel="stylesheet" href="stylesheets/module.css"/>
+    <script>
+        (function(win,doc){
+            win.addEventListener('resize',change,false);
+            function change(){
+            doc.documentElement.style.fontSize = doc.documentElement.clientWidth*20/1600+'px';
+            }
+            change();
+        })(window,document);
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="backhome" title="返回主页">
+            <img src="images/index.png" alt=""/>
+        </div>
+        <div class="cn_en">
+            <div class="cn">CN</div>
+            <div class="en">EN</div>
+        </div>
+    </div>
+    <div class="content clearFix">
+        <!--左侧模块创建区-->
+        <div class="content-left">
+            <h3 class="title title1">创建模块区</h3>
+            <div class="module">
+                <div class="btns">
+                    <div class="open-btn" title="创建模块">
+                        <span class="open-btn1 icon-bg"></span>
+                    </div>
+                    <div class="write-btn" title="上传">
+                        <span  class="write-btn1 icon-bg"></span>
+                    </div>
+                    <div class="delete-btn" title="删除">
+                        <span  class="delete-btn1 icon-bg"></span>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" version="1.1" color="transparent"
+                     id="pathModel" style=" position:absolute;top:0;left:0;"></svg>
+            </div>
+        </div>
+        <div class="content-right">
+            <!--编码区-->
+            <div class="module-top">
+                <h3 class="title title2">编码区</h3>
+                <div class="code">
+                    <textarea>
+function call(MPV) {
+    var MRV = {
+        "Output": {},
+		"PrivateInfo":{
+		"OutputPreviousValue":{}
+		},
+        "Refresh": [],
+        "Token": ""
+    };
+	/* 临时变量，用于运算 */
+	var inputPos;
+	var outValue = true;
+
+	/* 所有输入与 */
+	for (inputPos in MPV["Input"]) {
+		outValue = outValue && MPV["Input"][inputPos]["SignalValue"];
+	}
+	/* 输出数据 */
+	MRV["Output"]["Pos1"] = outValue;
+	/* 如果不是第一次执行需要判断PrivateInfo的输出值信息 */
+	if ("PrivateInfo" in MPV) {
+		/* 上一次的值和这一次的值不相等才刷新 */
+		if (MPV["PrivateInfo"]["OutputPreviousValue"]["Pos1"] != MRV["Output"]["Pos1"]) {
+			MRV["Refresh"][0] = "Pos1";
+		}
+	} else {
+		MRV["Refresh"][0] = "Pos1";
+	}
+	/* 记录此次状态output用于下一次调用使用 */
+	MRV["PrivateInfo"]["OutputPreviousValue"] = MRV["Output"];
+
+	return MRV;
+};
+
+                    </textarea>
+                    <div class="run-btn title3">运行</div>
+                </div>
+            </div>
+
+            <!--调试区-->
+            <div class="module-bottom">
+                <h3 class="title title4">调试区</h3>
+                <div class="debugging">
+                </div>
+            </div>
+        </div>
+        <!--创建模块弹出框克隆此处代码-->
+        <div style="display: none;" id="create-module" class="create-module">
+            <div class="close-btn icon-bg"></div>
+            <h4 class="module-title title5">创建新模块</h4>
+            <div class="module-name">
+                <span class="name title6">模块名称</span><input class="text" type="text"/><i class="right yz_icon"></i><i class="error yz_icon"></i>
+                <p class="err-tip"></p>
+            </div>
+            <div class="module-wrapper">
+                <ul class="module-content">
+                    <li class="type">
+                        <div class="title7">输入端</div>
+                        <div class="title8">静态参数</div>
+                        <div class="title9">输出端</div>
+                    </li>
+                    <li class="name">
+                        <div>
+                            <span class="title10">参数类型</span>
+                            <span class="title11">信号名称</span>
+                            <span class="title12">可选信号</span>
+                        </div>
+                        <div>
+                            <span class="title10">参数类型</span>
+                            <span class="title11">信号名称</span>
+                            <span class="title12">可选信号</span>
+                        </div>
+                        <div>
+                            <span class="title10">参数类型</span>
+                            <span class="title11">信号名称</span>
+                            <span class="title12">可选信号</span>
+                        </div>
+                    </li>
+                    <li id="signal" class="signal">
+                        <div class="input">
+                            <select>
+                                <option value="None">None</option>
+                                <option value="Digital">Digital</option>
+                                <option value="Serial">Serial</option>
+                                <option value="Analog">Analog</option>
+                            </select>
+                            <input type="text"/>
+                            <input type="checkbox" />
+                        </div>
+                        <div class="static">
+                            <select>
+                                <option value="None">None</option>
+                                <option value="Digital">Digital</option>
+                                <option value="Serial">Serial</option>
+                                <option value="Analog">Analog</option>
+                            </select>
+                            <input type="text"/>
+                            <input type="checkbox" />
+                        </div>
+                        <div class="output">
+                            <select>
+                                <option value="None">None</option>
+                                <option value="Digital">Digital</option>
+                                <option value="Serial">Serial</option>
+                                <option value="Analog">Analog</option>
+                            </select>
+                            <input type="text"/>
+                            <input type="checkbox" />
+                        </div>
+                        <i class="delete" title="删除当前行"></i>
+                    </li>
+                </ul>
+                <div class="add" title="添加一行"></div>
+            </div>
+            <div class="module_help">
+                <h4 class="title title13">模块帮助说明</h4>
+                <textarea id="module-description" placeholder="不能输入<或>字符"></textarea>
+            </div>
+            <div class="create-btn icon-bg title14">创建</div>
+        </div>
+        <!--模块编辑区克隆此处代码-->
+        <div class="edit-module" id="edit-module" style="display: none;">
+            <div class="edit-header">
+                <div class="edit-close bj_icon2" title="关闭编辑区" data-language="Close Edit"></div>
+                <div class="edit-setbtn" title="端口设置" data-language="Interface Setting"></div>
+            </div>
+            <div class="edit-In"></div>
+            <div class="edit-Static"></div>
+            <div class="edit-Out"></div>
+        </div>
+    </div>
+
+    <!--遮罩层-->
+    <div class="mask"></div>
+    <!--错误提示框-->
+    <div class="mes-err">
+        <div class="mes-close icon-bg"></div>
+        <div class="mes-icon"></div>
+        <p class="mes-text"></p>
+    </div>
+    <!--正确提示框-->
+    <div class="mes-ok">
+        <div class="mes-close icon-bg"></div>
+        <div class="mes-icon"></div>
+        <p class="mes-text"></p>
+    </div>
+</body>
+</html>
